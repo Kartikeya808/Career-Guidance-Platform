@@ -1,0 +1,3 @@
+Vercel note:
+- Vercel is serverless-first. If you want to run Express as-is, prefer Render/Railway.
+- If you insist on Vercel, convert endpoints into single-file serverless functions inside /api.
