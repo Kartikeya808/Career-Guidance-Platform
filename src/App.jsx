@@ -1,6 +1,32 @@
-import React, { useState } from 'react';
-import { Book, Video, FileText, Wrench, Check, Circle, Clock, Users, BookOpen, TrendingUp, Plus, Edit2, Trash2, Search, Menu, X, Sun, Moon, LogOut, Home, BarChart3, User, ChevronDown, ChevronRight, ExternalLink, Upload, Bookmark, Award, Calendar, Filter, Bell, Settings, Shield } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import LoginPage from "./LoginPage.jsx"; // make sure file exists in src
+import { fetchCareers } from "./api.js";
 
+import { Book, Video, FileText, Wrench, Check, Circle, Clock, Users, BookOpen, TrendingUp, Plus, Edit2, Trash2, Search, Menu, X, Sun, Moon, LogOut, Home, BarChart3, User, ChevronDown, ChevronRight, ExternalLink, Upload, Bookmark, Award, Calendar, Filter, Bell, Settings, Shield } from 'lucide-react';
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [careers, setCareers] = useState([]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) setUser({ email: "saved-user" });
+  }, []);
+
+  useEffect(() => {
+    if (user) {
+      const load = async () => {
+        try {
+          const data = await fetchCareers();
+          setCareers(data);
+        } catch (err) {
+          console.error("Error fetching careers:", err);
+        }
+      };
+      load();
+    }
+  }, [user]);
+//my old code
+  if (!user) return <LoginPage onLogin={setUser} />;
 // Sample Data aligned with SRS
 const SAMPLE_CAREERS = [
   {
