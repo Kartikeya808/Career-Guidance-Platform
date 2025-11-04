@@ -1,5 +1,7 @@
 // src/App.jsx
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegisterPage from "./RegisterPage";
 import LoginPage from "./LoginPage.jsx"; // ensure file exists in src
 import { fetchCareers } from "./api.js";
 import {
@@ -8,7 +10,17 @@ import {
   Home, BarChart3, User, ChevronDown, ChevronRight, ExternalLink, Upload,
   Bookmark, Award, Calendar, Filter, Bell, Settings, Shield
 } from 'lucide-react';
-
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        {/* other routes */}
+      </Routes>
+    </BrowserRouter>
+  );
+}
 export default function App() {
   const [user, setUser] = useState(null);
   const [careers, setCareers] = useState([]);
