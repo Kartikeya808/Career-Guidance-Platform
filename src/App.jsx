@@ -3,7 +3,7 @@ import LoginPage from "./LoginPage.jsx"; // make sure file exists in src
 import { fetchCareers } from "./api.js";
 
 import { Book, Video, FileText, Wrench, Check, Circle, Clock, Users, BookOpen, TrendingUp, Plus, Edit2, Trash2, Search, Menu, X, Sun, Moon, LogOut, Home, BarChart3, User, ChevronDown, ChevronRight, ExternalLink, Upload, Bookmark, Award, Calendar, Filter, Bell, Settings, Shield } from 'lucide-react';
-export default function App() {
+function App() {
   const [user, setUser] = useState(null);
   const [careers, setCareers] = useState([]);
 
