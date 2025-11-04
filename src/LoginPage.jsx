@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { loginUser } from "./api.js";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,6 +65,17 @@ export default function LoginPage({ onLogin }) {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+
+        {/* Step 3: Register Link */}
+        <p className="text-center mt-4 text-gray-600">
+          Don’t have an account?{" "}
+          <button
+            onClick={() => navigate("/register")}
+            className="text-blue-500 hover:underline"
+          >
+            Register
+          </button>
+        </p>
       </div>
     </div>
   );
