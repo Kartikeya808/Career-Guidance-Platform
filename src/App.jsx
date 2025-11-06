@@ -3,7 +3,6 @@ import {
   Home, BarChart3, Sun, Moon, Search, BookOpen, FileText, Target, Users,
   LogOut, ChevronRight, TrendingUp, Clock, Award, ExternalLink, Check, X
 } from "lucide-react";
-
 // Mock career data with complete roadmaps and resources
 const INITIAL_CAREERS = [
   {
@@ -59,6 +58,134 @@ const INITIAL_CAREERS = [
       { title: "Scikit-learn Documentation", type: "documentation", url: "https://scikit-learn.org", description: "Machine learning library reference" }
     ]
   },
+  {
+    id: "financial-analyst",
+    title: "Financial Analyst",
+    category: "Finance",
+    duration: "6 months",
+    steps: 7,
+    description: "Analyze financial statements, forecast company performance, and support investment decisions using financial models and data visualization tools.",
+    difficulty: "Intermediate",
+    salary: "$60k - $100k/year",
+    roadmap: [
+      { id: 1, title: "Finance Fundamentals", description: "Understand accounting, economics, and financial principles.", duration: "2 weeks", completed: false },
+      { id: 2, title: "Excel & Data Analysis", description: "Learn Excel modeling, data visualization, and basic analytics.", duration: "2 weeks", completed: false },
+      { id: 3, title: "Financial Modelling", description: "Build valuation models and forecasting spreadsheets.", duration: "3 weeks", completed: false },
+      { id: 4, title: "Corporate Finance", description: "Learn capital budgeting, risk management, and portfolio theory.", duration: "3 weeks", completed: false },
+      { id: 5, title: "Investment Analysis", description: "Study stock valuation, bonds, and equity research.", duration: "3 weeks", completed: false },
+      { id: 6, title: "Advanced Tools", description: "Use Power BI, Tableau, and Python for financial data.", duration: "3 weeks", completed: false },
+      { id: 7, title: "Projects & Portfolio", description: "Build real-world finance projects and reports.", duration: "2 weeks", completed: false }
+    ],
+    resources: [
+      { title: "Coursera – Financial Analysis Specialization", type: "course", url: "https://www.coursera.org/specializations/financial-analysis", description: "Master financial modeling and valuation skills." },
+      { title: "Investopedia – Finance Tutorials", type: "website", url: "https://www.investopedia.com", description: "Extensive finance and investing guides." },
+      { title: "CFI – Financial Modelling & Valuation", type: "course", url: "https://courses.corporatefinanceinstitute.com/", description: "Professional finance certification courses." }
+    ]
+  },
+
+  {
+    id: "investment-banker",
+    title: "Investment Banker",
+    category: "Finance",
+    duration: "9 months",
+    steps: 8,
+    description: "Assist corporations in raising capital, advising on M&A deals, and analyzing market trends to drive financial growth.",
+    difficulty: "Advanced",
+    salary: "$90k - $150k/year",
+    roadmap: [
+      { id: 1, title: "Accounting & Financial Statements", description: "Understand income statements, balance sheets, and cash flow.", duration: "3 weeks", completed: false },
+      { id: 2, title: "Corporate Valuation", description: "Learn DCF, comparable company analysis, and precedent transactions.", duration: "3 weeks", completed: false },
+      { id: 3, title: "Mergers & Acquisitions", description: "Explore M&A process, deal structuring, and negotiations.", duration: "4 weeks", completed: false },
+      { id: 4, title: "Pitch Books & Client Reports", description: "Create professional reports for investors and executives.", duration: "3 weeks", completed: false },
+      { id: 5, title: "Excel Modelling", description: "Advanced Excel and VBA for financial modeling.", duration: "2 weeks", completed: false },
+      { id: 6, title: "Internship / Projects", description: "Simulate investment bank case studies.", duration: "4 weeks", completed: false },
+      { id: 7, title: "Networking & Job Prep", description: "Build a LinkedIn profile and prepare for interviews.", duration: "2 weeks", completed: false },
+      { id: 8, title: "Final Assessment", description: "Complete a valuation project and submit.", duration: "2 weeks", completed: false }
+    ],
+    resources: [
+      { title: "Wall Street Oasis", type: "forum", url: "https://www.wallstreetoasis.com/", description: "Community for finance professionals and students." },
+      { title: "CFI Investment Banking Course", type: "course", url: "https://courses.corporatefinanceinstitute.com/", description: "Professional investment banking certification." },
+      { title: "Breaking Into Wall Street", type: "course", url: "https://breakingintowallstreet.com/", description: "In-depth training for aspiring bankers." }
+    ]
+  },
+
+  {
+    id: "quant-developer",
+    title: "Quant Developer",
+    category: "Fintech",
+    duration: "10 months",
+    steps: 8,
+    description: "Design trading algorithms, optimize portfolios, and use Python/C++ to implement quantitative models in financial markets.",
+    difficulty: "Advanced",
+    salary: "$100k - $180k/year",
+    roadmap: [
+      { id: 1, title: "Mathematics & Probability", description: "Master linear algebra, calculus, and probability theory.", duration: "3 weeks", completed: false },
+      { id: 2, title: "Programming Foundations", description: "Learn Python and C++ for quantitative analysis.", duration: "4 weeks", completed: false },
+      { id: 3, title: "Data Structures & Algorithms", description: "Optimize computational models and logic efficiency.", duration: "4 weeks", completed: false },
+      { id: 4, title: "Financial Engineering", description: "Understand derivatives, options, and risk models.", duration: "4 weeks", completed: false },
+      { id: 5, title: "Machine Learning for Finance", description: "Apply regression, classification, and reinforcement learning to trading.", duration: "5 weeks", completed: false },
+      { id: 6, title: "Backtesting Systems", description: "Simulate and test strategies using financial data.", duration: "3 weeks", completed: false },
+      { id: 7, title: "Portfolio Optimization", description: "Use Markowitz models and risk-return tradeoff.", duration: "2 weeks", completed: false },
+      { id: 8, title: "Deployment", description: "Automate models and integrate APIs for trading.", duration: "2 weeks", completed: false }
+    ],
+    resources: [
+      { title: "QuantStart", type: "website", url: "https://www.quantstart.com/", description: "Quant tutorials and career advice." },
+      { title: "EP Chan’s Blog", type: "blog", url: "https://epchan.blogspot.com/", description: "Insights into algorithmic trading and quantitative finance." },
+      { title: "edX Computational Finance", type: "course", url: "https://online.edx.org/course/computational-finance", description: "University-level quantitative finance content." }
+    ]
+  },
+
+  {
+    id: "hr-manager",
+    title: "HR Manager",
+    category: "Business",
+    duration: "4 months",
+    steps: 6,
+    description: "Lead recruitment, employee engagement, and compliance strategies to build a productive workforce.",
+    difficulty: "Beginner to Intermediate",
+    salary: "$50k - $90k/year",
+    roadmap: [
+      { id: 1, title: "HR Foundations", description: "Learn the role and responsibilities of HR professionals.", duration: "2 weeks", completed: false },
+      { id: 2, title: "Recruitment & Onboarding", description: "Manage hiring processes, interviews, and onboarding.", duration: "2 weeks", completed: false },
+      { id: 3, title: "Performance Management", description: "Set KPIs and conduct appraisals.", duration: "2 weeks", completed: false },
+      { id: 4, title: "Employee Relations", description: "Handle grievances and improve workplace culture.", duration: "2 weeks", completed: false },
+      { id: 5, title: "HR Analytics", description: "Use data to make workforce decisions.", duration: "2 weeks", completed: false },
+      { id: 6, title: "Training & Development", description: "Plan learning programs and career growth paths.", duration: "2 weeks", completed: false }
+    ],
+    resources: [
+      { title: "Coursera – Human Resource Management", type: "course", url: "https://www.coursera.org/specializations/human-resource-management", description: "Comprehensive HR specialization." },
+      { title: "LinkedIn Learning – HR Foundations", type: "course", url: "https://www.linkedin.com/learning/topics/human-resources", description: "Quick and practical HR lessons." },
+      { title: "SHRM – HR Resources", type: "website", url: "https://www.shrm.org/", description: "Official HR standards and best practices." }
+    ]
+  },
+
+  {
+    id: "chartered-accountant",
+    title: "Chartered Accountant (CA)",
+    category: "Accounting",
+    duration: "3 years",
+    steps: 10,
+    description: "Specialize in taxation, auditing, and financial management to provide advisory and compliance services.",
+    difficulty: "Advanced",
+    salary: "$80k - $150k/year",
+    roadmap: [
+      { id: 1, title: "CA Foundation", description: "Learn basic accounting, economics, and business law.", duration: "6 months", completed: false },
+      { id: 2, title: "CA Intermediate", description: "Master corporate accounting, auditing, and taxation.", duration: "1 year", completed: false },
+      { id: 3, title: "Articleship Training", description: "Gain hands-on industry experience.", duration: "1 year", completed: false },
+      { id: 4, title: "Final Preparation", description: "Prepare for ICAI final exams.", duration: "6 months", completed: false },
+      { id: 5, title: "Specialization", description: "Choose a field: taxation, audit, or finance.", duration: "3 months", completed: false },
+      { id: 6, title: "Soft Skills", description: "Enhance communication and presentation skills.", duration: "2 months", completed: false },
+      { id: 7, title: "Industry Tools", description: "Learn Tally, QuickBooks, and ERP systems.", duration: "3 months", completed: false },
+      { id: 8, title: "Compliance", description: "Understand GST, Income Tax, and Corporate Laws.", duration: "3 months", completed: false },
+      { id: 9, title: "Mock Tests", description: "Take practice exams to gauge readiness.", duration: "2 months", completed: false },
+      { id: 10, title: "Career Placement", description: "Apply for roles in firms and corporates.", duration: "2 months", completed: false }
+    ],
+    resources: [
+      { title: "ICAI Official Website", type: "website", url: "https://www.icai.org/", description: "Official source for CA syllabus and updates." },
+      { title: "CAclubindia", type: "community", url: "https://www.caclubindia.com/", description: "Discussion forum for CA students and professionals." },
+      { title: "Unacademy CA Courses", type: "course", url: "https://unacademy.com/goal/ca-foundation", description: "CA Foundation and Intermediate prep courses." }
+    ]
+  }
   {
     id: "digital-marketing",
     title: "Digital Marketing Specialist",
