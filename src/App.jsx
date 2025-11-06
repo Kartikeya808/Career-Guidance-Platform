@@ -185,7 +185,7 @@ const INITIAL_CAREERS = [
       { title: "CAclubindia", type: "community", url: "https://www.caclubindia.com/", description: "Discussion forum for CA students and professionals." },
       { title: "Unacademy CA Courses", type: "course", url: "https://unacademy.com/goal/ca-foundation", description: "CA Foundation and Intermediate prep courses." }
     ]
-  }
+  },
   {
     id: "digital-marketing",
     title: "Digital Marketing Specialist",
